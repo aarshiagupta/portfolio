@@ -140,3 +140,22 @@ img {
   margin: 1em auto;
   max-height: 500px; 
 }
+
+small {
+  color: oklch(50% 5% 200); 
+  font-size: 1em;         
+  display: block;
+  margin-top: 0.2em;
+}
+
+section article {
+  margin-bottom: 2em;
+}
+
+section ul {
+  padding-left: 2em;
+}
+
+section li {
+  margin-bottom: 0.5em; 
+}
