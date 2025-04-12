@@ -142,12 +142,11 @@ img {
 }
 
 small {
-  color: oklch(50% 5% 200); 
-  font-size: 1em;         
+  font-size: 1em;
+  font-weight: normal;
   display: block;
-  margin-top: 0.2em;
+  color: oklch(50% 5% 200); 
 }
-
 section article {
   margin-bottom: 2em;
 }
