@@ -66,7 +66,7 @@ if ("colorScheme" in localStorage) {
 let form = document.querySelector("#contact-form");
 
 form?.addEventListener("submit", function (event) {
-  event.preventDefault(); // Stop the default behavior
+  event.preventDefault();
 
   let data = new FormData(form);
   let params = [];
