@@ -79,5 +79,33 @@ form?.addEventListener("submit", function (event) {
   location.href = mailto;
 });
 
-
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+    console.log(response); 
+    if (!response.ok) {
+      throw new Error(`Failed to fetch: ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+}
+export async function fetchGitHubData(username) {
   
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
+export function renderProjects(projects, container, headingLevel = 'h2') {
+  container.innerHTML = '';
+  projects.forEach(p => {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <${headingLevel}>${p.title}</${headingLevel}>
+      <img src="${p.image}" alt="">
+      <p>${p.description}</p>
+    `;
+    container.appendChild(article);
+  });
+}
