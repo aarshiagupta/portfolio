@@ -200,3 +200,95 @@ section li {
   margin: 0;
 }
 
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.project-year {
+  color: gray;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
+#projects-pie-plot {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 20px auto;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.5em;
+  padding: 1em;
+  border: 1px solid #ddd;
+}
+
+.legend .swatch {
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+
+
+svg path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+svg:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.selected:is(path) {
+  fill: oklch(60% 45% 0) !important;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  --color: black; /* default fallback */
+}
+
+.legend .swatch {
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend li.selected {
+  --color: oklch(60% 45% 0) !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.legend li.highlighted {
+  text-decoration: underline dashed;
+  font-style: italic;
+}
+.legend li.highlighted {
+  text-decoration: underline dashed;
+  font-style: italic;
+}
+svg path:hover {
+  transform: scale(1.01);
+  transform-origin: center;
+}
+
+

@@ -1,22 +1,76 @@
+
 [
     {
-        "title": "Lorem ipsum dolor",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet."
+      "title": "Meal-Time Predictor",
+      "year": "2024",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Logistic regression model that classifies recipes as fast or slow based on nutritional and preparation complexity."
     },
     {
-        "title": "Lorem ipsum dolor",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet."
+      "title": "Text Sentiment Analysis",
+      "year": "2023",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Used NLTK and NumPy to detect sentiment in textual datasets for emotion-based filtering."
     },
     {
-        "title": "Lorem ipsum dolor",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet."
+      "title": "Music Recommendation System",
+      "year": "2023",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Recommended songs based on audio features like tempo, acousticness, and time signature using pandas."
     },
     {
-        "title": "Lorem ipsum dolor",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet."
+      "title": "Expository Visualization: Grocery Nutrition",
+      "year": "2024",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Created a scatterplot to reveal how food nutritional quality varies by processing level and grocery chain."
+    },
+    {
+      "title": "Deceptive Visualization: NYPD Discipline",
+      "year": "2025",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Used design tricks like truncated axes, misleading color, and chart exaggeration to make opposing claims with the same data."
+    },
+    {
+      "title": "Intro to scikit-learn: Recipe Duration Classifier",
+      "year": "2025",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Built a cooking-time classifier using scikit-learn, preprocessing, and GridSearchCV for optimized accuracy."
+    },
+    {
+      "title": "Image Processing Toolkit",
+      "year": "2023",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Implemented grayscale, blur, negate, and color transformations on RGB images with custom Python functions."
+    },
+    {
+      "title": "NRV AI Chatbot Evaluation",
+      "year": "2024",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Compared GenAI and traditional LLMs to build an intelligent chatbot based on data performance and scalability."
+    },
+    {
+      "title": "Marimo Notebook Builder",
+      "year": "2025",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Built interactive Python notebooks combining code, UI, and narrative for technical education with Marimo."
+    },
+    {
+      "title": "Fundraising Analytics Tool",
+      "year": "2024",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Analyzed club fundraising data to improve engagement strategies and visualize donor behavior."
+    },
+    {
+      "title": "Placeholder Project 1",
+      "year": "2022",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "This is a sample placeholder project you can replace with a real one."
+    },
+    {
+      "title": "Placeholder Project 2",
+      "year": "2021",
+      "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+      "description": "Another placeholder to help you meet the 12-project minimum. Swap it with a real project later!"
     }
-]
+  ]
+  
