@@ -206,7 +206,13 @@ function renderLanguageBreakdown(selection) {
 
   for (const [lang, count] of breakdown) {
     const percent = d3.format('.1~%')(count / lines.length);
-    container.innerHTML += `<dt>${lang}</dt><dd>${count} lines (${percent})</dd>`;
+    // container.innerHTML += `<dt>${lang}</dt><dd>${count} lines (${percent})</dd>`;
+    container.innerHTML += `
+  <div class="stat-item">
+    <div class="stat-label">${lang}</div>
+    <div class="stat-value">${count} lines (${percent})</div>
+  </div>
+`;
   }
 }
 
