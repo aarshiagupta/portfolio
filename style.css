@@ -291,4 +291,237 @@ svg path:hover {
   transform-origin: center;
 }
 
+.stats {
+  margin-bottom: 2em;
+}
+.gridlines line {
+  stroke: lightgray;
+  stroke-opacity: 0.5;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5em;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  transition: opacity 0.5s ease;
+}
+
+.tooltip[hidden] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 0.5em 1em;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 1em;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  font-size: 0.9em;
+  z-index: 10;
+  transition: opacity 0.5s ease;
+}
+
+dl.info:not(:hover, :focus-within)[hidden] {
+  opacity: 0;
+  visibility: hidden;
+}
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+  fill-opacity: 0.7;
+}
+
+circle:hover {
+  transform: scale(1.5);
+  fill-opacity: 1;
+}
+circle.selected {
+  fill: #ff6b6b;
+}
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  background-color: Canvas;
+  color: CanvasText;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid color-mix(in oklch, currentColor 30%, CanvasText);
+}
+
+.stats-grid dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: color-mix(in oklch, currentColor 60%, Canvas);
+  margin-bottom: 0.2em;
+  letter-spacing: 1px;
+}
+
+.stats-grid dd {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: inherit;
+}
+
+#profile-stats dl,
+#profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #888;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  gap: 1rem;
+  background: #121212;
+}
+
+#profile-stats dt {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0;
+  text-align: center;
+}
+
+#profile-stats dd {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  padding: 1em;
+  font-size: 0.9rem;
+  max-width: 300px;
+  color: var(--color-text, inherit);
+}
+
+.tooltip dt {
+  font-weight: bold;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 0.5em;
+}
+
+.tooltip dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+dl.info {
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .tooltip {
+    background-color: #111 !important;
+    color: #f5f5f5 !important;
+  }
+
+  .tooltip dt {
+    color: #aaa !important;
+  }
+
+  .tooltip dd {
+    color: #f5f5f5 !important;
+  }
+
+  .tooltip a {
+    color: hotpink !important;
+  }
+}
 
