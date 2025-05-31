@@ -320,13 +320,19 @@ dl.info {
 }
 
 circle {
-  transition: 200ms;
+  transition: all 200ms, r calc(var(--r) * 100ms); 
   transform-origin: center;
+}
+@starting-style {
+  circle {
+    r: 0; 
+  }
 }
 
 circle:hover {
-  transform: scale(1.5);
+  transform: scale(1.5); 
 }
+
 
 dl.info {
   display: grid;
@@ -422,34 +428,35 @@ circle.selected {
   color: inherit;
 }
 
-#profile-stats dl,
-#profile-stats {
+#stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 1px solid #888;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(6, 1fr); 
   gap: 1rem;
-  background: #121212;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
 }
 
-#profile-stats dt {
-  font-size: 0.85rem;
+#stats dt {
+  grid-row: 1;
+  font-size: 0.8rem;
+  font-weight: 600;
   text-transform: uppercase;
-  color: #888;
-  margin: 0;
-  text-align: center;
+  color: #666;
+  margin-bottom: 0.5em;
 }
 
-#profile-stats dd {
-  font-size: 1.5rem;
+#stats dd {
+  grid-row: 2;
+  font-size: 2rem;
   font-weight: bold;
-  color: white;
   margin: 0;
-  text-align: center;
+  color: #111;
 }
-
 
 .tooltip {
   position: fixed;
@@ -602,4 +609,135 @@ circle.selected {
     color: white;
     border-color: #444;
   }
+}
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: steelblue;
+  border-radius: 50%;
+}
+dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+}
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+#files > div {
+  grid-column: 1 / -1;
+  display: contents;
+}
+
+dt {
+  grid-column: 1;
+}
+
+dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+}
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color, steelblue);
+  border-radius: 50%;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 1000;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  padding: 1em;
+  font-size: 0.9rem;
+  max-width: 300px;
+  color: inherit;
+  display: block; 
+}
+
+.tooltip dt {
+  font-weight: bold;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 0.5em;
+}
+
+.tooltip dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit;
+  margin-bottom: 0.5em;
+}
+
+#stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  background-color: white;
+  margin: 2rem 0;
+}
+
+#stats dl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 100px;
+}
+
+#stats dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+#stats dd {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+#scatter-story {
+  flex: 1;
+  position: relative;
+}
+
+#scatter-plot {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  height: 50vh;
+}
+.step {
+  padding-bottom: 3rem;
+  max-width: 30ch;
+  line-height: 1.5;
 }
